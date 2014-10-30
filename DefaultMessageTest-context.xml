@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="defaultMessage" class="com.spring.tutorial.DefaultMesage" />
+
+	<bean id="constructorMessage" class="com.spring.tutorial.ConstructorMessage">
+		<constructor-arg value="Spring is fun with constructor injector" />
+	</bean>
+	
+	<bean id="setterMessage" class="com.spring.tutorial.SetterMessage">
+		<property name="message" value="Spring is fun with setter mesaage" />
+	</bean>
+	
+	<bean id="referMessage" class="com.spring.tutorial.ReferMessage">
+		<property name="message" ref="constructorMessage" />
+	</bean>
+
+
+</beans>
